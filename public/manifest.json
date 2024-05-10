@@ -1,0 +1,15 @@
+{
+  "name": "Chating App",
+  "short_name": "Chat",
+  "icons": [
+    {
+      "src": "https://img.freepik.com/premium-vector/modern-chat-logo-design-templates_25572-149.jpg?size=626&ext=jpg&uid=R100225231&ga=GA1.1.1287577530.1694759978&semt=ais",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff"
+}

@@ -1,0 +1,46 @@
+<%-include("../partials/header")%> <%-include("../partials/navbar")%>
+<div class="m-5">
+  <%-include("../partials/flash")%>
+  <div class="display-6">Signup</div>
+
+  <form class="validation" action="/register" method="POST" novalidate>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Username</label>
+      <input
+        type="text"
+        class="form-control"
+        name="username"
+        id="username"
+        placeholder="Username"
+        aria-describedby="emailHelp"
+        required />
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Email</label>
+      <input
+        type="email"
+        class="form-control"
+        placeholder="Email"
+        name="email"
+        id="email"
+        required />
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        placeholder="Password"
+        name="password"
+        id="password"
+        required />
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<%-include("../partials/footer")%>

@@ -1,0 +1,114 @@
+<%-include("../partials/header")%> <%-include("../partials/navbar")%>
+<%-include("../partials/flash")%>
+<style>
+  /* Chat container styles */
+  .chat-container {
+    height: 80vh; /* Set a fixed height for the chat container */
+    overflow-y: auto; /* Add vertical scrollbar */
+  }
+  .list {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJOTkt4IS8NRopwKJFhuRVgdiDyJHupIVlLg&usqp=CAU);
+  }
+
+  .sender1 {
+    width: 88vw;
+    padding: 5px;
+    display: flex;
+    justify-content: end;
+  }
+
+  .reciver1 {
+    width: 88vw;
+    margin: 25px;
+    padding: 5px;
+  }
+
+  /* Individual chat message styles */
+  .message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%; /* Limit message width */
+  }
+
+  /* Sender-specific message styles */
+  .message.sender {
+    color: white;
+    background-color: #044343; /* Light green background for sender's messages */
+    align-self: flex-end; /* Align sender's messages to the right */
+    text-align: end;
+  }
+
+  /* Receiver-specific message styles */
+  .message.receiver {
+    color: white;
+    background-color: #353535; /* Light gray background for receiver's messages */
+    align-self: flex-start; /* Align receiver's messages to the left */
+  }
+
+  /* Input box and send button styles */
+  .input-group {
+    display: flex;
+    margin-top: 10px;
+  }
+
+  .input-field {
+    flex: 1; /* Take up remaining space */
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none; /* Remove default input focus styling */
+    resize: none; /* Prevent textarea resizing */
+    overflow-y: auto; /* Add vertical scrollbar when needed */
+    max-height: 150px; /* Set maximum height for the input field */
+  }
+
+  .send-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none; /* Remove default button focus styling */
+  }
+
+  .send-button:hover {
+    background-color: #546455;
+  }
+</style>
+<div class="">
+  <h1 class="p-3 text-center text-white mb-2 bg-info-subtle text-info-emphasis">
+    Real Time Chating Application
+  </h1>
+  <div class="chat-cont mx-3 mb-3" id="chat">
+    <div class="list chat-container border rounded-lg" id="list"></div>
+    <div class="container3">
+      <input hidden id="98name" name="usename" value="<%=currentUser %>" />
+      <div class="input-group">
+        <input
+          id="inp"
+          type="text"
+          placeholder="Type your message..."
+          class="input-field" />
+        <button id="send-btn" class="send-button">Send</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Function to scroll the chat container to the bottom
+  function scrollToBottom() {
+    var chatContainer = document.querySelector(".chat-container");
+    chatContainer.scrollTop = chatContainer.scrollHeight;
+  }
+
+  // Scroll to bottom when page loads
+  window.onload = scrollToBottom;
+</script>
+
+<%-include("../partials/footer")%>
