@@ -7,10 +7,10 @@ function scrollToBottom() {
 // Scroll to bottom when page loads
 window.onload = scrollToBottom;
 
-console.log("hii");
+//console.log("hii");
 
 const username = document.getElementById("98name");
-console.log(username.value);
+// console.log(username.value);
 
 const socket = io();
 // $("#chat").hide();
